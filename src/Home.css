@@ -1,0 +1,219 @@
+@import url('https://fonts.google.com/specimen/Roboto');
+
+.card{
+  width: auto;
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  padding: 20px 20px;
+  border-radius: 20px;
+  max-width: 54rem;
+}
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image img{
+  max-width: 100%;
+  height: auto;
+}
+.information{
+  padding: 30px 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Roboto;
+  color:  hsl(234, 29%, 20%);
+}
+.information h1, .card_confirm h1{
+  font-size: 50px;
+  line-height: 50px;
+}
+.information li{
+  display: flex;
+  gap: 20px;
+}
+.information li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.information li p{
+  font-size: 16px;
+}
+.information li img{
+  width: 20px;
+}
+
+.information .input_row p{
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+.information .input_row .group{
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+}
+.information .input_row .group .error{
+  color: hsl(4, 100%, 67%);
+}
+
+.information .input_row input{
+  padding: 15px 10px;
+  padding-left: 20px;
+  border: none;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 6px;
+  width: calc(100% - 70px);
+  font-family: Roboto;
+}
+.information .input_row input:active, .information .input_row input:focus{
+  border: 1px solid hsl(235, 18%, 26%);
+}
+
+.information .input_row .input_error{
+  color: hsl(4, 100%, 67%)!important;
+  border-color: hsl(4, 100%, 67%);
+  background-color:  rgb(255, 98, 87, 0.2);;
+}
+.information .input_row .input_error:active, .information .input_row .input_error:focus{
+  border-color: hsl(4, 100%, 67%);
+}
+.information .input_row .input_error::placeholder{
+  color: hsl(4, 100%, 67%)!important;
+}
+
+.information button{
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 10px;
+  width: calc(100% - 40px);
+  background-color:  hsl(234, 29%, 20%);
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  transform: translate(0);
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+.information button:hover{
+  background: hsla(347, 100%, 66%, 1);
+
+  background: linear-gradient(90deg, hsla(347, 100%, 66%, 1) 0%, hsla(4, 100%, 67%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(347, 100%, 66%, 1) 0%, hsla(4, 100%, 67%, 1) 100%);
+
+  background: -webkit-linear-gradient(90deg, hsla(347, 100%, 66%, 1) 0%, hsla(4, 100%, 67%, 1) 100%);
+}
+.information button:hover:before {
+  content:"";
+  position: absolute;
+  inset: -1px;
+  transform: translate3d(0,0,-1px);
+  background: conic-gradient(from 90deg at 40% -25%, hsla(347, 100%, 66%, 1), hsla(4, 100%, 67%, 1));
+  filter: blur(10px);
+}
+.card_confirm{
+  padding: 50px 60px;
+  width: calc(30rem - 180px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  gap: 20px;
+  font-family: Roboto;
+  border-radius: 20px;
+}
+.card_confirm img{
+  width: 60px;
+}
+.card_confirm p{
+  font-size: 16px;
+}
+.card_confirm button{
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px 10px;
+  width: calc(100%);
+  background-color:  hsl(234, 29%, 20%);
+  font-family: Roboto;
+  font-size: 14px;
+  transition: all 1s ease-in-out;
+  position: relative;
+  transform: translate(0);
+  transform-style: preserve-3d;
+}
+.card_confirm button:hover{
+  background: hsla(347, 100%, 66%, 1);
+  background: linear-gradient(90deg, hsla(347, 100%, 66%, 1) 0%, hsla(4, 100%, 67%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(347, 100%, 66%, 1) 0%, hsla(4, 100%, 67%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(347, 100%, 66%, 1) 0%, hsla(4, 100%, 67%, 1) 100%);
+}
+.card_confirm button:hover:before {
+  content:"";
+  position: absolute;
+  inset: -1px;
+  transform: translate3d(0,0,-1px);
+  background: conic-gradient(from 90deg at 40% -25%, hsla(347, 100%, 66%, 1), hsla(4, 100%, 67%, 1));
+  filter: blur(10px);
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    display: block;
+    overflow-x: hidden;
+  }
+  .card{
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    padding-top: 0;
+    flex-direction: column-reverse;
+  }
+  .image{
+    display: block;
+  }
+  .image img{
+    width: calc(100% - 15px);
+  }
+  .information{
+    width: calc(100% - 70px);
+    margin: 0;
+    padding: 40px 30px;
+  }
+  .information input{
+    width: calc(100% - 30px)!important;
+  }
+  .information button{
+    padding: 20px 20px;
+    width: 100%!important;
+  }
+
+  .card_confirm{
+    padding: 130px 30px;
+    padding-bottom: 30px;
+    width: calc(100% - 60px);
+    height: calc(100% - 160px);
+    border-radius: 0;
+    display: block;
+    position: relative;
+  }
+  .card_confirm .row{
+    margin: 30px 0;
+  }
+  .card_confirm .specialrow{
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 60px);
+  }
+}
